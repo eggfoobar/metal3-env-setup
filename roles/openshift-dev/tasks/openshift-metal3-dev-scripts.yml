@@ -6,10 +6,12 @@
           Host 192.168.111.*
           StrictHostKeyChecking=no
           UserKnownHostsFile=/dev/null
-      mode: '644'
+      mode: "644"
 - name: Checkout openshift-metal3 dev-scripts
   git:
       dest: "{{dev_scripts_path}}"
       repo: https://github.com/openshift-metal3/dev-scripts
+      #repo: https://github.com/eggfoobar/metal3-dev-scripts
       update: no
+      version: master
 - import_tasks: config.yml

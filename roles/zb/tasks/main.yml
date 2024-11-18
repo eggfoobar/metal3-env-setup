@@ -6,16 +6,13 @@
 - name: Install SSH key
   authorized_key:
       user: "{{whoami.stdout}}"
-      key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      key: "{{ lookup('file', '~/.ssh/id_ed25519.pub') }}"
 - name: Install inputrc
   copy:
       dest: .inputrc
       content: |
-        "\e[A":history-search-backward
-        "\e[B":history-search-forward
+          "\e[A":history-search-backward
+          "\e[B":history-search-forward
 - name: Set up for git user
   import_role:
-    name: git-user
-- name: Set up for vim user
-  import_role:
-    name: vim-user
+      name: git-user

@@ -14,6 +14,26 @@
   changed_when: true
   notify:
       - Set OCP project
+# - name: Start OpenShift requirements
+#   make:
+#     chdir: "{{dev_scripts_path}}"
+#     target: "requirements"
+# - name: Start OpenShift configure
+#   make:
+#     chdir: "{{dev_scripts_path}}"
+#     target: "configure"
+# - name: Start OpenShift build_installer
+#   make:
+#     chdir: "{{dev_scripts_path}}"
+#     target: "build_installer"
+# - name: Start OpenShift ironic
+#   make:
+#     chdir: "{{dev_scripts_path}}"
+#     target: "ironic"
+# - name: Start OpenShift install_config
+#   make:
+#     chdir: "{{dev_scripts_path}}"
+#     target: "install_config"
 - name: Start OpenShift
   make:
       chdir: "{{dev_scripts_path}}"

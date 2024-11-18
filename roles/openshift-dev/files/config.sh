@@ -96,7 +96,13 @@ set -x
 #export NTP_SERVERS="00.my.internal.ntp.server.com;01.other.ntp.server.com"
 
 # Indicate number of workers to deploy
-#export NUM_WORKERS=0
+export NUM_WORKERS=0
+export NUM_ARBITERS=1
+export NUM_MASTERS=2
+# export FEATURE_SET="TechPreviewNoUpgrade"
+export CI_SERVER="api.build09.ci.devcluster.openshift.com"
+export OPENSHIFT_INSTALL_RELEASE_IMAGE_OVERRIDE=registry.build09.ci.openshift.org/ci-ln-mqdd3ik/release:latest
+export OPENSHIFT_RELEASE_IMAGE=registry.build09.ci.openshift.org/ci-ln-mqdd3ik/release:latest
 
 # Indicate number of extra VMs to create but not deploy
 #export NUM_EXTRA_WORKERS=0

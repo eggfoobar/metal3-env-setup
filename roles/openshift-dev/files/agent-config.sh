@@ -25,6 +25,16 @@ set -x
 # BEGIN CLUSTERBOT OVERRIDE BLOCK
 # END CLUSTERBOT OVERRIDE BLOCK
 
+export NUM_WORKERS=0
+export NUM_ARBITERS=1
+export NUM_MASTERS=2
+export FEATURE_SET="TechPreviewNoUpgrade"
+
+export CI_SERVER="api.build09.ci.devcluster.openshift.com"
+export OPENSHIFT_INSTALL_RELEASE_IMAGE_OVERRIDE=registry.build09.ci.openshift.org/ci-ln-kwlf732/release:latest
+export OPENSHIFT_RELEASE_IMAGE=registry.build09.ci.openshift.org/ci-ln-kwlf732/release:latest
+
+
 # Set a single config variable AGENT_E2E_TEST_SCENARIO to create a cluster for the different scenarios
 # i.e. Single Node Openshift(SNO), Highly Available (HA) or Compact cluster.
 # The only supported values for AGENT_E2E_TEST_SCENARIO are COMPACT_IPV4, COMPACT_IPV6, HA_IPV4, HA_IPV6, SNO_IPV4 and SNO_IPV6.
