@@ -2,3 +2,5 @@
 *.pyo
 
 inventory.ini
+proxy.env
+kubeconfig

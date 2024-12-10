@@ -18,3 +18,4 @@
       marker: "# {mark} GATHERCTL BLOCK"
       block: "{{ lookup('file', 'gatherctl.sh') }}"
   when: method == "agent"
+- import_tasks: proxy.yml
